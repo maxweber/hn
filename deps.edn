@@ -1,7 +1,9 @@
-{:deps {cljfx {:mvn/version "1.6.7"}
+{:deps {cljfx/cljfx {:mvn/version "1.6.7"}
         cljfx/css {:mvn/version "1.1.0"}
-        clj-http {:mvn/version "3.9.1"}
+        clj-http/clj-http {:mvn/version "3.9.1"}
         metosin/jsonista {:mvn/version "0.2.5"}
-        crouton {:mvn/version "0.1.2"}}
- :aliases {:uberjar {:extra-deps {seancorfield/depstar {:mvn/version "0.5.2"}}
-                     :main-opts ["-m" "hf.depstar.uberjar" "dist/hn.jar"]}}}
+        crouton/crouton {:mvn/version "0.1.2"}}
+ :aliases {
+           :build {:deps {io.github.clojure/tools.build
+                          {:git/tag "v0.7.2" :git/sha "0361dde"}}
+                   :ns-default build}}}
